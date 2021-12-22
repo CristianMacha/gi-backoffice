@@ -1,0 +1,63 @@
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+
+    @media (max-width: 600px) {
+        background: #ffffff;
+    }
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.login-content {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 400px;
+    align-content: center;
+
+    @media (max-width: 600px) {
+        margin: 10px;
+        width: 270px;
+        padding: 0;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.attendance-content {
+    background: #ffffff;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 600px) {
+        margin: 10px;
+        width: 270px;
+        padding: 0;
+    }
+}
+
+img { 
+    width: 200px;
+}

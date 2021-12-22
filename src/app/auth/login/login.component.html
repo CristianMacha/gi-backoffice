@@ -1,1 +1,69 @@
-<p>login works!</p>
+<div class="content">
+    <div class="login-content">
+        <div class="header-logo">
+            <img src="assets/svgs/logo.svg" alt="">
+            <p>Welcome to Granite Impressions</p>
+        </div>
+        <div>
+            <form [formGroup]="loginForm">
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input 
+                        type="email"
+                        matInput
+                        autocomplete="off"
+                        formControlName="email">
+                    <mat-icon matSuffix>email</mat-icon>
+                    <mat-error>Email required.</mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input 
+                        [type]="hidePassword ? 'password' : 'text'"
+                        matInput
+                        autocomplete="off"
+                        formControlName="password">
+                    <button
+                        type="button"
+                        mat-icon-button
+                        matSuffix
+                        (click)="hidePassword = !hidePassword">
+                        <mat-icon>{{hidePassword ? 'visibility_off': 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error>Password required.</mat-error>
+                </mat-form-field>
+                <button
+                    mat-flat-button
+                    color="primary"
+                    (click)="handleSignin()"
+                    [disabled]="loading">
+                    Sign in
+                </button>
+
+            </form>
+            <div class="alert alert-error" *ngIf="showAlert">
+                <mat-icon class="icon">error_outline</mat-icon>
+                <span>Failed to login</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="attendance-content">
+        <h1>Attendance</h1>
+        <mat-form-field appearance="outline">
+            <mat-label>User code</mat-label>
+            <input 
+                type="text"
+                matInput
+                autocomplete="off"
+                required>
+            <mat-error>User code required.</mat-error>
+        </mat-form-field>
+        <button 
+            type="button"
+            mat-stroked-button
+            color="primary">
+            Register
+        </button>
+    </div>
+</div>

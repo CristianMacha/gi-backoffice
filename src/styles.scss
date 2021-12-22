@@ -6,6 +6,7 @@
 
 // Bootstrap grid
 @import "../node_modules/bootstrap/scss/bootstrap-grid.scss";
+@import "assets/scss/alert";
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -38,8 +39,18 @@ $gi-backoffice-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body { 
+  height: 100%;
+  width: 100%;
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #fafafa; 
+}
 
 .container {
   width: auto;
